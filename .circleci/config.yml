@@ -16,7 +16,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "9e:3c:6b:62:fc:60:5c:71:65:c3:7e:3b:8b:1a:8c:48"
+            - "86:5d:c8:ee:74:1a:47:3f:79:62:c0:96:5c:53:ed:10"
       - run: 
           command: |
             ssh ubuntu@18.234.219.63 "bash deploy.sh"
@@ -28,7 +28,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "9e:3c:6b:62:fc:60:5c:71:65:c3:7e:3b:8b:1a:8c:48"
+            - "86:5d:c8:ee:74:1a:47:3f:79:62:c0:96:5c:53:ed:10"
       - run:
           command: |
             ssh ubuntu@3.90.218.59 "bash deploy.sh"
