@@ -14,24 +14,12 @@ jobs:
     machine:
       enabled: true
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "86:5d:c8:ee:74:1a:47:3f:79:62:c0:96:5c:53:ed:10"
-      - run: 
-          command: |
-            ssh ubuntu@54.236.27.31 "bash deploy.sh"
   approval-job:
 
   production-deploy:
     machine:
       enabled: true
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "86:5d:c8:ee:74:1a:47:3f:79:62:c0:96:5c:53:ed:10"
-      - run:
-          command: |
-            ssh ubuntu@52.91.178.137 "bash deploy.sh"
 workflows:
     build-and-test:
       jobs:
