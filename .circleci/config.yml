@@ -16,10 +16,10 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "86:5d:c8:ee:74:1a:47:3f:79:62:c0:96:5c:53:ed:10"
+            - "9e:3c:6b:62:fc:60:5c:71:65:c3:7e:3b:8b:1a:8c:48"
       - run: 
           command: |
-            ssh ubuntu@54.236.27.31 "bash deploy.sh"
+            ssh ubuntu@18.234.219.63 "bash deploy.sh"
   approval-job:
 
   production-deploy:
@@ -28,10 +28,10 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "86:5d:c8:ee:74:1a:47:3f:79:62:c0:96:5c:53:ed:10"
+            - "9e:3c:6b:62:fc:60:5c:71:65:c3:7e:3b:8b:1a:8c:48"
       - run:
           command: |
-            ssh ubuntu@52.91.178.137 "bash deploy.sh"
+            ssh ubuntu@3.90.218.59 "bash deploy.sh"
 workflows:
     build-and-test:
       jobs:
@@ -51,4 +51,4 @@ workflows:
               - approval-job
             filters:
               branches:
-                 only: master
+                only: master
